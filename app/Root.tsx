@@ -1,21 +1,19 @@
 import * as React from 'react';
-import * as Redux from 'react-redux';
-import { History } from 'history';
 
 import { Provider } from 'react-redux';
-import { ConnectedRouter } from 'react-router-redux';
-import Routes from '../routes';
+import { ConnectedRouter } from 'connected-react-router';
+import QYFramework from "./pages/Framework";
 
 interface IRootType {
-  store: Redux.Store<any>;
-  history: History
+  store: any
+  history: any
 };
 
 export default function Root({ store, history }: IRootType) {
   return (
     <Provider store={store}>
       <ConnectedRouter history={history}>
-        <Routes />
+          <QYFramework/>
       </ConnectedRouter>
     </Provider>
   );

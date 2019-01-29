@@ -1,11 +1,10 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import { createHashHistory } from 'history';
-import { routerMiddleware, push } from 'react-router-redux';
+import { routerMiddleware, push } from 'connected-react-router';
 import { createLogger } from 'redux-logger';
-import rootReducer from '../reducers';
+import CreateRootReducer from '../reducers/index';
 
-import * as counterActions from '../actions/counter';
 
 declare const window: Window & {
   __REDUX_DEVTOOLS_EXTENSION_COMPOSE__?(a: any): void;
@@ -18,7 +17,6 @@ declare const module: NodeModule & {
 };
 
 const actionCreators = Object.assign({}, 
-  counterActions,
   {push}
 );
 
@@ -45,8 +43,8 @@ const enhancer = composeEnhancers(
 
 export = {
   history,
-  configureStore(initialState: Object | void) {
-    const store = createStore(rootReducer, initialState, enhancer);
+  configureStore(initialState: any) {
+    const store = createStore(CreateRootReducer(history), initialState,enhancer);
 
     if (module.hot) {
       module.hot.accept('../reducers', () =>

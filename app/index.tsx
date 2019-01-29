@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
-import Root from './containers/Root';
 import './app.global.scss';
+import Root from "./Root";
 
-const { configureStore, history } = require('./store/configureStore');
+const { history,configureStore } = require('./store/configureStore');
 const store = configureStore();
 
 render(
@@ -15,8 +15,8 @@ render(
 );
 
 if ((module as any).hot) {
-  (module as any).hot.accept('./containers/Root', () => {
-    const NextRoot = require('./containers/Root').default;
+  (module as any).hot.accept('./Root', () => {
+    const NextRoot = require('./Root').default;
     render(
       <AppContainer>
         <NextRoot store={store} history={history} />

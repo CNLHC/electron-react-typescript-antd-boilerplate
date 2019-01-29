@@ -1,10 +1,12 @@
-# electron-react-typescript-boilerplate
+# electron-react-typescript-antd-boilerplate
 
-[![Build Status][travis-image]][travis-url]
-[![Greenkeeper badge](https://badges.greenkeeper.io/iRath96/electron-react-typescript-boilerplate.svg)](https://greenkeeper.io/)
-
-This is a slight modificiation of the great [electron-react-boilerplate](https://github.com/chentsulin/electron-react-boilerplate) by chentsulin.
+This is a modification of [electron-react-typescript-boilerplate](https://github.com/irath96/electron-react-typescript-boilerplate) which is a modification [electron-react-boilerplate](https://github.com/chentsulin/electron-react-boilerplate) by chentsulin.
 Instead of [Babel](https://babeljs.io) and [flow](https://flowtype.org) this version uses [TypeScript](https://www.typescriptlang.org). Support for [Sass](http://sass-lang.com) has also been added.
+
+This version has used `antd` to build a demo app with sidebar and two navigate-able pages.
+
+`redux` was updated to `4.0.1` from `3.6.0` and `electron-builder` was updated to `20.38.0` from `19.8.0`, the old version of these two dependencies will cause wired problems.
+Meanwhile, Some deprecated old dependencies were substituted by newer version.
 
 # electron-react-boilerplate
 
@@ -12,21 +14,17 @@ Instead of [Babel](https://babeljs.io) and [flow](https://flowtype.org) this ver
 
 > Live editing development on desktop app
 
-[Electron](http://electron.atom.io/) application boilerplate based on [React](https://facebook.github.io/react/), [Redux](https://github.com/reactjs/redux), [React Router](https://github.com/reactjs/react-router), [Webpack](http://webpack.github.io/docs/), [React Transform HMR](https://github.com/gaearon/react-transform-hmr) for rapid application development
-
-## Screenshot
-
-![Electron Boilerplate Demo](https://cloud.githubusercontent.com/assets/3382565/10557547/b1f07a4e-74e3-11e5-8d27-79ab6947d429.gif)
+[Electron](http://electron.atom.io/) application boilerplate based on [React](https://facebook.github.io/react/), [Redux](https://github.com/reactjs/redux), [React Router](https://github.com/reactjs/react-router), [antd](https://github.com/ant-design/ant-design) ,[Webpack](http://webpack.github.io/docs/), [React Transform HMR](https://github.com/gaearon/react-transform-hmr) for rapid application development
 
 ## Install
 
-* **Note: requires a node version >= 6 and an npm version >= 3.**
+* **Note: requires a node version >= 8 and an npm version >= 3.**
 * **If you have installation or compilation issues with this project, please see [our debugging guide](https://github.com/chentsulin/electron-react-boilerplate/issues/400)**
 
 First, clone the repo via git:
 
 ```bash
-git clone https://github.com/iRath96/electron-react-typescript-boilerplate.git your-project-name
+git clone https://github.com/CNLHC/electron-react-typescript-antd-boilerplate.git your-project-name
 ```
 
 And then install dependencies.

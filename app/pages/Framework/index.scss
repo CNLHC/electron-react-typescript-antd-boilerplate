@@ -1,0 +1,15 @@
+$HeaderHeight : 64 px;
+:local{
+  .QYFramework{
+    height: 100vh;
+    .sidebarLogo{
+      height: 64px;
+    }
+    .header{
+      height: 64px;
+      background: #fff;
+      padding: 0
+    }
+
+  }
+}
